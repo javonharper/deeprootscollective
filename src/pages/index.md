@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: Deep Roots Collective
-image: /img/home-jumbotron.jpg
+image: /img/img_0623.jpg
 heading: Great coffee with a conscience
 subheading: Support sustainable farming while enjoying a cup
 mainpitch:
@@ -11,10 +11,7 @@ mainpitch:
     empower these communities to move toward self-sufficiency, healing and
     liberation. We do this through community programming that provides free
     access to political, historical and agricultural education.
-description: Kaldi is the ultimate spot for coffee lovers who want to learn
-  about their java’s origin and support the farmers that grew it. We take coffee
-  production, roasting and brewing seriously and we’re glad to pass that
-  knowledge to anyone.
+description: Who We Are
 intro:
   blurbs:
     - image: /img/coffee.png
@@ -44,12 +41,11 @@ intro:
         space where you can hang out with fellow coffee lovers and learn about
         coffee making techniques. All of the artwork on display there is for
         sale. The full price you pay goes to the artist.
-  heading: What we offer
-  description: >
-    Kaldi is the ultimate spot for coffee lovers who want to learn about their
-    java’s origin and support the farmers that grew it. We take coffee
-    production, roasting and brewing seriously and we’re glad to pass that
-    knowledge to anyone. This is an edit via identity...
+  heading: Who We Are
+  description: The Deep Roots Collective is organized by passionate members of
+    Philadelphia's Black community who are invested in the liberation of Black
+    folks everywhere. Our members include artists, students, educators, and
+    creatives.
 main:
   heading: Great coffee with no compromises
   description: >
