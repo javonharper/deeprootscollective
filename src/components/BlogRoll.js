@@ -1,6 +1,6 @@
-import React from 'react'
+import { graphql, Link, StaticQuery } from 'gatsby'
 import PropTypes from 'prop-types'
-import { Link, graphql, StaticQuery } from 'gatsby'
+import React from 'react'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 class BlogRoll extends React.Component {
@@ -58,13 +58,13 @@ class BlogRoll extends React.Component {
   }
 }
 
-BlogRoll.propTypes = {
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
-    }),
-  }),
-}
+// BlogRoll.propTypes = {
+//   data: PropTypes.shape({
+//     allMarkdownRemark: PropTypes.shape({
+//       edges: PropTypes.array,
+//     }),
+//   }),
+// }
 
 export default () => (
   <StaticQuery

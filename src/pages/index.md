@@ -11,6 +11,9 @@ mainpitch:
     empower these communities to move toward self-sufficiency, healing and
     liberation. We do this through community programming that provides free
     access to political, historical and agricultural education.
+aboutus:
+  title: Who We Are
+  description: The Deep Roots Collective is organized by passionate members of Philadelphia's Black community who are invested in the liberation of Black folks everywhere. Our members include artists, students, educators, and creatives.
 description: Taking Control Of Our Futures
 intro:
   blurbs: []

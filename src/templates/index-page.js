@@ -1,10 +1,9 @@
-import React from "react";
+import { graphql, Link } from "gatsby";
 import PropTypes from "prop-types";
-import { Link, graphql } from "gatsby";
-
-import Layout from "../components/Layout";
+import React from "react";
 import Features from "../components/Features";
-import BlogRoll from "../components/BlogRoll";
+import Layout from "../components/Layout";
+
 
 export const IndexPageTemplate = ({
   image,
@@ -12,6 +11,7 @@ export const IndexPageTemplate = ({
   heading,
   subheading,
   mainpitch,
+  aboutus,
   description,
   intro,
 }) => (
@@ -78,6 +78,14 @@ export const IndexPageTemplate = ({
                     <h3 className="subtitle">{mainpitch.description}</h3>
                   </div>
                 </div>
+                <div className="content">
+                  <div className="tile">
+                    <h1 className="title">{aboutus.title}</h1>
+                  </div>
+                  <div className="tile">
+                    <h3 className="subtitle">{aboutus.description}</h3>
+                  </div>
+                </div>
                 <div className="columns">
                   <div className="column is-12">
                     <h3 className="has-text-weight-semibold is-size-2">
@@ -120,6 +128,7 @@ IndexPageTemplate.propTypes = {
   heading: PropTypes.string,
   subheading: PropTypes.string,
   mainpitch: PropTypes.object,
+  aboutus: PropTypes.object,
   description: PropTypes.string,
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
@@ -127,8 +136,9 @@ IndexPageTemplate.propTypes = {
 };
 
 const IndexPage = ({ data }) => {
+  
   const { frontmatter } = data.markdownRemark;
-
+  console.log(frontmatter)
   return (
     <Layout>
       <IndexPageTemplate
@@ -137,6 +147,7 @@ const IndexPage = ({ data }) => {
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
+        aboutus={frontmatter.aboutus}
         description={frontmatter.description}
         intro={frontmatter.intro}
       />
@@ -169,6 +180,10 @@ export const pageQuery = graphql`
         heading
         subheading
         mainpitch {
+          title
+          description
+        }
+        aboutus {
           title
           description
         }

@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import React from "react";
-import instagram from "../img/social/instagram.svg";
 import logo from "../img/logo.jpg";
+import instagram from "../img/social/instagram.svg";
 
 const Navbar = class extends React.Component {
   constructor(props) {
