@@ -4,7 +4,13 @@ import React from "react";
 import Features from "../components/Features";
 import Layout from "../components/Layout";
 
-export const IndexPageTemplate = ({ image, title, subheading, aboutus }) => (
+export const IndexPageTemplate = ({
+  image,
+  title,
+  subheading,
+  aboutus,
+  missionstatement,
+}) => (
   <div>
     <div
       className="full-width-image margin-top-0"
@@ -63,6 +69,14 @@ export const IndexPageTemplate = ({ image, title, subheading, aboutus }) => (
               <div className="content">
                 <div className="content">
                   <div className="tile">
+                    <h1 className="title">{missionstatement.title}</h1>
+                  </div>
+                  <div className="tile">
+                    <h3 className="subtitle">{missionstatement.description}</h3>
+                  </div>
+                </div>
+                <div className="content">
+                  <div className="tile">
                     <h1 className="title">{aboutus.title}</h1>
                   </div>
                   <div className="tile">
@@ -83,6 +97,7 @@ IndexPageTemplate.propTypes = {
   title: PropTypes.string,
   subheading: PropTypes.string,
   aboutus: PropTypes.object,
+  missionstatement: PropTypes.object,
 };
 
 const IndexPage = ({ data }) => {
@@ -94,6 +109,7 @@ const IndexPage = ({ data }) => {
         title={frontmatter.title}
         subheading={frontmatter.subheading}
         aboutus={frontmatter.aboutus}
+        missionstatement={frontmatter.missionstatement}
       />
     </Layout>
   );
@@ -114,6 +130,8 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
+        subheading
+
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
@@ -121,8 +139,14 @@ export const pageQuery = graphql`
             }
           }
         }
+
         heading
-        subheading
+
+        missionstatement {
+          title
+          description
+        }
+
         aboutus {
           title
           description

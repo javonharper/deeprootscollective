@@ -50,6 +50,16 @@ collections:
           - { label: Heading, name: heading, widget: string }
           - { label: Subheading, name: subheading, widget: string }
           - {
+              label: MissionStatement,
+              name: missionstatement,
+              widget: object,
+              fields:
+                [
+                  { label: Title, name: title, widget: string },
+                  { label: Description, name: description, widget: text },
+                ],
+            }
+          - {
               label: Aboutus,
               name: aboutus,
               widget: object,

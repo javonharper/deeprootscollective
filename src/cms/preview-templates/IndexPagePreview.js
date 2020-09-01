@@ -13,6 +13,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         heading={data.heading}
         subheading={data.subheading}
         aboutus={data.aboutus || {}}
+        missionstatement={data.missionstatement || {}}
       />
     );
   } else {
