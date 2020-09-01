@@ -25,7 +25,6 @@ plan:
 mainpitch:
   title: mainpitch.title
   description: mainpitch.desc
-description: Taking Control Of Our Futures
 intro:
   blurbs: []
   heading: Who We Are
