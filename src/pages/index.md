@@ -22,9 +22,6 @@ plan:
   - We are an all Black space.
   - We believe in food sovereignty
 
-mainpitch:
-  title: mainpitch.title
-  description: mainpitch.desc
 intro:
   blurbs: []
   heading: Who We Are
