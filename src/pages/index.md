@@ -2,7 +2,6 @@
 templateKey: index-page
 title: Deep Roots Collective
 image: /img/img_0623.jpg
-heading: Who We Are
 subheading: Self Sufficiency, Healing, Liberation.
 
 missionstatement:
@@ -22,13 +21,6 @@ plan:
   - We are an all Black space.
   - We believe in food sovereignty
 
-intro:
-  blurbs: []
-  heading: Who We Are
-  description: The Deep Roots Collective is organized by passionate members of
-    Philadelphia's Black community who are invested in the liberation of Black
-    folks everywhere. Our members include artists, students, educators, and
-    creatives.
 main:
   heading: Great coffee with no compromises
   description: >

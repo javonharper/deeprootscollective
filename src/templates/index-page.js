@@ -4,14 +4,7 @@ import React from "react";
 import Features from "../components/Features";
 import Layout from "../components/Layout";
 
-export const IndexPageTemplate = ({
-  image,
-  title,
-  heading,
-  subheading,
-  aboutus,
-  intro,
-}) => (
+export const IndexPageTemplate = ({ image, title, subheading, aboutus }) => (
   <div>
     <div
       className="full-width-image margin-top-0"
@@ -76,21 +69,6 @@ export const IndexPageTemplate = ({
                     <h3 className="subtitle">{aboutus.description}</h3>
                   </div>
                 </div>
-                <div className="columns">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
-                  </div>
-                </div>
-                <Features gridItems={intro.blurbs} />
-                <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
-                      See all products
-                    </Link>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -103,26 +81,19 @@ export const IndexPageTemplate = ({
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string,
   subheading: PropTypes.string,
   aboutus: PropTypes.object,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
 };
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
-  console.log(frontmatter);
   return (
     <Layout>
       <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
-        heading={frontmatter.heading}
         subheading={frontmatter.subheading}
         aboutus={frontmatter.aboutus}
-        intro={frontmatter.intro}
       />
     </Layout>
   );
@@ -154,20 +125,6 @@ export const pageQuery = graphql`
         subheading
         aboutus {
           title
-          description
-        }
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-          heading
           description
         }
       }
