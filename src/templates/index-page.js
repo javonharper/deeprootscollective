@@ -4,7 +4,6 @@ import React from "react";
 import Features from "../components/Features";
 import Layout from "../components/Layout";
 
-
 export const IndexPageTemplate = ({
   image,
   title,
@@ -58,6 +57,7 @@ export const IndexPageTemplate = ({
             color: "white",
             lineHeight: "1",
             padding: "0.25em",
+            textAlign: "center",
           }}
         >
           {subheading}
@@ -136,9 +136,8 @@ IndexPageTemplate.propTypes = {
 };
 
 const IndexPage = ({ data }) => {
-  
   const { frontmatter } = data.markdownRemark;
-  console.log(frontmatter)
+  console.log(frontmatter);
   return (
     <Layout>
       <IndexPageTemplate

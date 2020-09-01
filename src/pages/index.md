@@ -3,7 +3,7 @@ templateKey: index-page
 title: Deep Roots Collective
 image: /img/img_0623.jpg
 heading: Who We Are
-subheading: Self Sufficiency, Healing, Liberation
+subheading: Self Sufficiency, Healing, Liberation.
 
 missionstatement:
   title: Mission Statement
