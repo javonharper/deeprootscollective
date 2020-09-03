@@ -1,7 +1,6 @@
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
-import Features from "../components/Features";
 import Layout from "../components/Layout";
 
 export const IndexPageTemplate = ({
