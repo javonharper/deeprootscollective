@@ -9,6 +9,7 @@ export const IndexPageTemplate = ({
   subheading,
   aboutus,
   missionstatement,
+  tenpointplanheader,
 }) => (
   <div>
     <div
@@ -82,6 +83,16 @@ export const IndexPageTemplate = ({
                     <h3 className="subtitle">{aboutus.description}</h3>
                   </div>
                 </div>
+                <div className="content">
+                  <div className="tile">
+                    <h1 className="title">{tenpointplanheader.title}</h1>
+                  </div>
+                  <div className="tile">
+                    <h3 className="subtitle">
+                      {tenpointplanheader.description}
+                    </h3>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -97,6 +108,7 @@ IndexPageTemplate.propTypes = {
   subheading: PropTypes.string,
   aboutus: PropTypes.object,
   missionstatement: PropTypes.object,
+  tenpointplanheader: PropTypes.object,
 };
 
 const IndexPage = ({ data }) => {
@@ -109,6 +121,7 @@ const IndexPage = ({ data }) => {
         subheading={frontmatter.subheading}
         aboutus={frontmatter.aboutus}
         missionstatement={frontmatter.missionstatement}
+        tenpointplanheader={frontmatter.tenpointplanheader}
       />
     </Layout>
   );
@@ -147,6 +160,10 @@ export const pageQuery = graphql`
         }
 
         aboutus {
+          title
+          description
+        }
+        tenpointplanheader {
           title
           description
         }
