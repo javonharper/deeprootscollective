@@ -2,7 +2,6 @@ import { Link } from "gatsby";
 import React from "react";
 import instagram from "../img/social/instagram.svg";
 
-
 const Footer = class extends React.Component {
   render() {
     return (
@@ -18,11 +17,11 @@ const Footer = class extends React.Component {
                         Home
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link className="navbar-item" to="/about">
                         About
                       </Link>
-                    </li>
+                    </li> */}
                     {/* <li>
                       <Link className="navbar-item" to="/products">
                         Products
@@ -83,7 +82,10 @@ const Footer = class extends React.Component {
                     style={{ width: "1em", height: "1em" }}
                   />
                 </a> */}
-                <a title="instagram" href="https://www.instagram.com/deeprootscollectivephilly/?hl=en">
+                <a
+                  title="instagram"
+                  href="https://www.instagram.com/deeprootscollectivephilly/?hl=en"
+                >
                   <img
                     src={instagram}
                     alt="Instagram"
