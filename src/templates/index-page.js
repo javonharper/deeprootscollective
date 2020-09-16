@@ -110,7 +110,7 @@ export const IndexPageTemplate = ({
                 <div className="content">
                   {tenpp.map((point) => {
                     return (
-                      <div className="margin-bottom-1">
+                      <div style={{ marginBottom: "1rem" }}>
                         <div className="subtitle">{point}</div>
                       </div>
                     );

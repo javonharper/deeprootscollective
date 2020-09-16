@@ -85,6 +85,8 @@ const Footer = class extends React.Component {
                 <a
                   title="instagram"
                   href="https://www.instagram.com/deeprootscollectivephilly/?hl=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <img
                     src={instagram}
