@@ -54,6 +54,7 @@ export const IndexPageTemplate = ({
             color: "white",
             lineHeight: "1",
             padding: "0.25em",
+            fontFamily: "'DM Serif Display', serif",
           }}
         >
           {title}
@@ -111,7 +112,7 @@ export const IndexPageTemplate = ({
                   {tenpp.map((point) => {
                     return (
                       <div style={{ marginBottom: "1rem" }}>
-                        <div className="subtitle">{point}</div>
+                        <div>{point}</div>
                       </div>
                     );
                   })}
